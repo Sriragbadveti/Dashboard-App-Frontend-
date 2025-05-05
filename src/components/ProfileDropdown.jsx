@@ -1,4 +1,4 @@
-"use client"
+
 
 import axios from "axios";
 import { useState, useRef, useEffect } from "react"
@@ -16,7 +16,7 @@ export default function ProfileDropdown() {
   const handleLogout = async () => {
     try {
       console.log("Logging out...");
-      const response = await axios.post("http://localhost:3000/api/auth/logout", {}, {
+      const response = await axios.post("https://dashboard-app-backend-weyw.onrender.com/api/auth/logout", {}, {
         withCredentials: true
       });
       console.log(response.data.message);

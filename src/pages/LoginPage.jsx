@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState } from "react"
 import axios from "axios"
@@ -33,7 +33,7 @@ export default function LoginPage() {
     setIsLoading(true)
 
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/login", formData, { withCredentials: true })
+      const response = await axios.post("https://dashboard-app-backend-weyw.onrender.com/api/auth/login", formData, { withCredentials: true })
 
       console.log("Successfully logged in the user", response.data.message)
       showToast("Login successful! Redirecting...", "success")

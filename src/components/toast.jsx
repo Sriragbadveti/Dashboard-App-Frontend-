@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 
@@ -10,7 +10,7 @@ export default function Toast({ message, type = "success", duration = 3000, onCl
       setIsVisible(false)
       setTimeout(() => {
         onClose && onClose()
-      }, 300) // Allow time for fade-out animation
+      }, 300) 
     }, duration)
 
     return () => clearTimeout(timer)

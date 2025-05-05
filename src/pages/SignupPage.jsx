@@ -1,4 +1,4 @@
-"use client";
+
 
 import { useState } from "react";
 import axios from "axios";
@@ -26,7 +26,7 @@ export default function SignupPage() {
     console.log("Form submitted:", formData);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/register",
+        "https://dashboard-app-backend-weyw.onrender.com/api/auth/register",
         formData,
         {
           withCredentials: true,

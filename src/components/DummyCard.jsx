@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState } from "react"
 import Toast from "../components/toast"

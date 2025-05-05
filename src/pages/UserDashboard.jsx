@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState, useEffect } from "react"
 import axios from "axios"
@@ -19,7 +19,7 @@ const navigate = useNavigate();
   const getUserData = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.get("http://localhost:3000/api/user/profile", {
+      const response = await axios.get("https://dashboard-app-backend-weyw.onrender.com/api/user/profile", {
         withCredentials: true,
       })
       setProfileData(response.data.sendUser)
@@ -37,7 +37,7 @@ const navigate = useNavigate();
   const getSavedPosts = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.get("http://localhost:3000/api/save/showSavedPosts", {
+      const response = await axios.get("https://dashboard-app-backend-weyw.onrender.com/api/save/showSavedPosts", {
         withCredentials: true,
       })
       setFetchSavedPosts(response.data.savedPosts)
@@ -53,7 +53,7 @@ const navigate = useNavigate();
   // Handle delete saved post
   const deleteSavedPost = async (feedUrl) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/save/unsavepost?feedUrl=${feedUrl}`, {
+      const response = await axios.delete(`https://dashboard-app-backend-weyw.onrender.com/api/save/unsavepost?feedUrl=${feedUrl}`, {
         withCredentials: true,
       })
       setFetchSavedPosts((prev) => prev.filter((post) => post.postId !== feedUrl))
@@ -86,7 +86,7 @@ const navigate = useNavigate();
     }
 
     try {
-      const response = await axios.put("http://localhost:3000/api/user/updateprofile", payload, {
+      const response = await axios.put("https://dashboard-app-backend-weyw.onrender.com/api/user/updateprofile", payload, {
         withCredentials: true,
       })
       console.log("Profile updated successfully", response.data)

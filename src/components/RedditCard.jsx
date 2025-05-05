@@ -1,4 +1,4 @@
-"use client"
+
 
 import { useState } from "react"
 import axios from "axios"
@@ -30,7 +30,7 @@ export default function RedditCard({ post }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/feed/report",
+        "https://dashboard-app-backend-weyw.onrender.com/api/feed/report",
         { feedId, reason: reportReason },
         { withCredentials: true },
       )
@@ -46,7 +46,7 @@ export default function RedditCard({ post }) {
   const handleSavedPosts = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/save/savedpost",
+        "https://dashboard-app-backend-weyw.onrender.com/api/save/savedpost",
         {
           feedUrl: feedId,
           title: post.title,
