@@ -14,17 +14,17 @@ const App = () => {
         <Route
           path="/feed"
           element={
-            <ProtectedRoute>
+            
               <FeedPage />
-            </ProtectedRoute>
+            
           }
         />
         <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+            
               <Dashboard />
-            </ProtectedRoute>
+            
           }
         />
       </Routes>

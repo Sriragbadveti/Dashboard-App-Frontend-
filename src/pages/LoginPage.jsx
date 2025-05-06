@@ -39,9 +39,9 @@ export default function LoginPage() {
       showToast("Login successful! Redirecting...", "success")
 
       // Short delay before redirecting to show the success toast
-      setTimeout(() => {
+      
         navigate("/feed")
-      }, 1000)
+      
     } catch (error) {
       console.log("Error during login", error.response?.data || error.message)
 
